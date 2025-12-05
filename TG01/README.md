@@ -1,72 +1,88 @@
-# Telegram Bot s prognozu pogody v Rostove-na-Donu
+# Telegram-бот с прогнозом погоды в Ростове-на-Дону
 
-## Opisanie
+## Описание
 
-Eto prostoi Telegram-bot, razrabotannyi na Python s ispol'zovaniem biblioteki **aiogram 3.0**. Bot poluchaet prognoz pogody iz API OpenWeatherMap i otpravlyaet ee v Telegram.
+Это простой Telegram-бот, разработанный на Python с использованием библиотеки **aiogram 3.0**. Бот получает прогноз погоды из API OpenWeatherMap и отправляет его в Telegram.
 
-## Funkcional
+## Функционал
 
-- `/start` - pokazyvaet privetstvennoe soobshchenie
-- `/weather` - poluchaet i otpravlyaet prognoz pogody v Rostove-na-Donu
-- `/help` - pokazyvaet spravka ob vozmozhnostyakh bota
+- `/start` - показывает приветственное сообщение
+- `/weather` - получает и отправляет прогноз погоды в Ростове-на-Дону
+- `/help` - показывает справку об возможностях бота
 
-## Trebovaniya
+## Требования
 
 - Python 3.9+
 - aiogram 3.0.0
 - requests 2.31.0
 
-## Ustanovka
+## Установка
 
-1. Kloniruite ili skachyte proekt
-2. Ustanovite zavisimosti:
+1. Клонируйте или скачайте проект
+2. Установите зависимости:
    ```bash
    pip install -r requirements.txt
    ```
 
-## Konfiguracia
+## Конфигурация
 
-### 1. Poluchite token Telegram-bota
+### 1. Получите токен Telegram-бота
 
-1. Otkroite @BotFather v Telegram
-2. Otpravte komandy: `/newbot`
-3. Sleduite instrukciiam
-4. Skopiiruite poluchennyi token
+1. Откройте @BotFather в Telegram
+2. Отправьте команду: `/newbot`
+3. Следуйте инструкциям
+4. Скопируйте полученный токен
 
-### 2. Poluchite API klyuch OpenWeatherMap
+### 2. Получите API ключ OpenWeatherMap
 
-1. Zaregistriruites' na https://openweathermap.org/api
-2. Poluchite besplatnyy API klyuch (Free plan)
-3. Skopiiruite klyuch
+1. Зарегистрируйтесь на https://openweathermap.org/api
+2. Получите бесплатный API ключ (Free plan)
+3. Скопируйте ключ
 
-### 3. Nastroite config.py
+### 3. Настройте config.py
 
-Otkroite fayl `config.py` i zamestiте:
+Откройте файл `config.py` и замените:
 
 ```python
 TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
 WEATHER_API_KEY = "YOUR_OPENWEATHERMAP_API_KEY"
 ```
 
-## Zapusk bota
+## Запуск бота
 
 ```bash
 python bot.py
 ```
 
-## Struktura proekta
+Бот начнёт слушать сообщения и будет готов принимать команды.
 
-- `bot.py` - glavnyy fayl s botom
-- `config.py` - konfiguracia s tokenami
-- `weather.py` - funkciya dlya polucheniya pogody
-- `requirements.txt` - zavisimosti
-- `README.md` - dokumentacia
+## Структура проекта
+
+- `bot.py` - главный файл с ботом и обработчиками команд
+- `config.py` - конфигурация с токенами и параметрами
+- `weather.py` - функция для получения погоды из API
+- `requirements.txt` - зависимости проекта
+- `README.md` - документация
 
 ## API
 
-Bot ispol'zuet OpenWeatherMap API:
-- Temperatura
-- Opisanie pogodnykh usloviy
-- Vlazhnost'
-- Davlenie
-- Skorost' vetra
+Бот использует OpenWeatherMap API для получения данных о погоде:
+- Температура (в градусах Цельсия)
+- Ощущаемая температура
+- Описание погодных условий
+- Влажность
+- Давление
+- Скорость ветра
+
+## Ошибки
+
+Если бот не работает:
+
+1. Проверьте, что токен в `config.py` верно настроен
+2. Проверьте, что API ключ в `config.py` верно настроен
+3. Проверьте интернет-соединение
+4. Проверьте, что все библиотеки установлены: `pip install -r requirements.txt`
+
+## Лицензия
+
+MIT
