@@ -29,10 +29,9 @@ Eto prostoi Telegram-bot, razrabotannyi na Python s ispol'zovaniem biblioteki **
 ### 1. Poluchite token Telegram-bota
 
 1. Otkroite @BotFather v Telegram
-2. Otpravte komandy:
-   - `/newbot` - dlya sozdaniya novogo bota
-   - Sleduite instrukciiam
-3. Skopiiruite poluchennyi token
+2. Otpravte komandy: `/newbot`
+3. Sleduite instrukciiam
+4. Skopiiruite poluchennyi token
 
 ### 2. Poluchite API klyuch OpenWeatherMap
 
@@ -45,47 +44,29 @@ Eto prostoi Telegram-bot, razrabotannyi na Python s ispol'zovaniem biblioteki **
 Otkroite fayl `config.py` i zamestiте:
 
 ```python
-TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"  # Vstavte vash token
-WEATHER_API_KEY = "YOUR_OPENWEATHERMAP_API_KEY"  # Vstavte vash API klyuch
+TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
+WEATHER_API_KEY = "YOUR_OPENWEATHERMAP_API_KEY"
 ```
 
 ## Zapusk bota
-
-Dlya zapuska bota vypolnite:
 
 ```bash
 python bot.py
 ```
 
-Bot nachnot slushat' soobshcheniya i budет ready prinimat' komandy.
-
 ## Struktura proekta
 
-- `bot.py` - glavnyy fayl s botom i obrabotchikami komand
-- `config.py` - konfiguracia s tokenami i parametrami
-- `weather.py` - funkciya dlya polucheniya pogody iz API
-- `requirements.txt` - zavisimosti proekta
+- `bot.py` - glavnyy fayl s botom
+- `config.py` - konfiguracia s tokenami
+- `weather.py` - funkciya dlya polucheniya pogody
+- `requirements.txt` - zavisimosti
 - `README.md` - dokumentacia
 
 ## API
 
-Bot ispol'zuet OpenWeatherMap API dlya polucheniya dannykh o pogode:
-- Temperatura (v gradusakh Cel'siya)
-- "Oshchushchaetsia kak" temperatura
+Bot ispol'zuet OpenWeatherMap API:
+- Temperatura
 - Opisanie pogodnykh usloviy
 - Vlazhnost'
 - Davlenie
 - Skorost' vetra
-
-## Oshibki
-
-Esli bot ne rabotaet:
-
-1. Proverite, chto token v `config.py` verno nastroyen
-2. Proverite, chto API klyuch v `config.py` verno nastroyen
-3. Proverite internet-soedinenije
-4. Proverite, chto vse biblioteki ustanovleny: `pip install -r requirements.txt`
-
-## Litsenziya
-
-MIT
